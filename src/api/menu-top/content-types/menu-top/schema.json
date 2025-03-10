@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_tops",
+  "info": {
+    "singularName": "menu-top",
+    "pluralName": "menu-tops",
+    "displayName": "MenuTop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "string"
+    },
+    "sort": {
+      "type": "integer"
+    }
+  }
+}

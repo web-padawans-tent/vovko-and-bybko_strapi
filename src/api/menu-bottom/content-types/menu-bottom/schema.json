@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_bottoms",
+  "info": {
+    "singularName": "menu-bottom",
+    "pluralName": "menu-bottoms",
+    "displayName": "MenuBottom",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "menuLinksAbout": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-links"
+    },
+    "menuLinksSocials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-links"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "menu_bottom"
+    }
+  }
+}

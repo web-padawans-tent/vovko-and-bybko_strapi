@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_portfolios",
+  "info": {
+    "displayName": "Portfolio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}
