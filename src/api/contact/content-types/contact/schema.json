@@ -24,8 +24,8 @@
         }
       }
     },
-    "mail": {
-      "type": "email",
+    "phone": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -40,8 +40,8 @@
         }
       }
     },
-    "phone": {
-      "type": "string",
+    "email": {
+      "type": "email",
       "pluginOptions": {
         "i18n": {
           "localized": true

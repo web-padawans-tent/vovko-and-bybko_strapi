@@ -10,16 +10,31 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "menuLinksAbout": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.menu-links"
+      "component": "shared.menu-links",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "menuLinksSocials": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.menu-links"
+      "component": "shared.menu-links",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "services": {
       "type": "relation",
