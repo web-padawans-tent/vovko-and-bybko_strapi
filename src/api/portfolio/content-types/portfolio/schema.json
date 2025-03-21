@@ -4,46 +4,101 @@
   "info": {
     "singularName": "portfolio",
     "pluralName": "portfolios",
-    "displayName": "Portfolio"
+    "displayName": "Portfolios"
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "siteType": {
-      "type": "string"
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "text": {
-      "type": "blocks"
-    },
-    "tasks": {
+    "textPreview": {
       "type": "text"
     },
-    "images": {
+    "titleImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
-    "projectName": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgHEX": {
       "type": "string"
     },
-    "promoImage": {
+    "stack": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
+      ]
+    },
+    "linkBg": {
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "slug": {
-      "type": "string"
+      "type": "text"
+    },
+    "sort": {
+      "type": "integer",
+      "default": 10
+    },
+    "steps": {
+      "displayName": "textMultiple",
+      "type": "component",
+      "repeatable": true,
+      "component": "text.text-multiple"
+    },
+    "font": {
+      "type": "enumeration",
+      "enum": [
+        "Orbitron",
+        "Cormorant"
+      ]
     }
   }
 }

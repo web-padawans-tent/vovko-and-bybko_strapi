@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_text_text_multiples",
+  "info": {
+    "displayName": "textMultiple"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  }
+}

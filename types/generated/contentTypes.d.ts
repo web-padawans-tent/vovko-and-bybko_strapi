@@ -712,36 +712,45 @@ export interface ApiMenuTopMenuTop extends Struct.CollectionTypeSchema {
 export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   collectionName: 'portfolios';
   info: {
-    displayName: 'Portfolio';
+    displayName: 'Portfolios';
     pluralName: 'portfolios';
     singularName: 'portfolio';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
+    bgHEX: Schema.Attribute.String;
+    bgImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    font: Schema.Attribute.Enumeration<['Orbitron', 'Cormorant']>;
+    linkBg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::portfolio.portfolio'
-    > &
-      Schema.Attribute.Private;
-    projectName: Schema.Attribute.String;
-    promoImage: Schema.Attribute.Media<
+    >;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.Text;
+    sort: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<10>;
+    stack: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    steps: Schema.Attribute.Component<'text.text-multiple', true>;
+    textPreview: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    titleImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    publishedAt: Schema.Attribute.DateTime;
-    siteType: Schema.Attribute.String;
-    slug: Schema.Attribute.String;
-    tasks: Schema.Attribute.Text;
-    text: Schema.Attribute.Blocks;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

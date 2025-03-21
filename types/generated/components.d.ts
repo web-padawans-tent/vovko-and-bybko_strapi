@@ -136,6 +136,16 @@ export interface SharedSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface TextTextMultiple extends Struct.ComponentSchema {
+  collectionName: 'components_text_text_multiples';
+  info: {
+    displayName: 'textMultiple';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -150,6 +160,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.steps': SharedSteps;
+      'text.text-multiple': TextTextMultiple;
     }
   }
 }
